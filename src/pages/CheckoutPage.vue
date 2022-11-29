@@ -55,6 +55,14 @@ const form = reactive({
   expYear: null,
   cvv: null
 })
+
+const setForm = (prop, value) => {
+  if (prop === 'cardNumber') {
+    form[prop] = value ? value.replace(/\s/g, '').match(/.{1,4}/g).join(' ') : ''
+    return
+  }
+  form[prop] = value
+}
 </script>
 
 <template>
@@ -75,7 +83,7 @@ const form = reactive({
           </div>
         </div>
       </div>
-      <creditcard-form :form="form" />
+      <creditcard-form :modelValue="form" @change="setForm" />
     </div>
   </div>
 </template>
