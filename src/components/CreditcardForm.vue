@@ -33,6 +33,5 @@ defineProps({
       :modelValue="modelValue.cardNumber"
       @change="value => emit('change', 'cardNumber', value)"
     />
-    <div class="text-white">{{ modelValue }}</div>
   </div>
 </template>
