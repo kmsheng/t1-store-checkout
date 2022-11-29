@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-qty {
+    @apply w-8 font-bold hover:bg-[#e7e7e7] transition-colors duration-300;
+  }
+}
