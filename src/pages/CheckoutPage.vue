@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import CartList from '../components/CartList.vue'
 import CreditcardForm from '../components/CreditcardForm.vue'
 import food1 from '../assets/food1.jpg'
@@ -38,6 +38,8 @@ const setQty = (item, qty) => {
     item.qty = qty
   }
 }
+
+const subtotal = computed(() => items.reduce((s, item) => s + (item.price * item.qty), 0))
 </script>
 
 <template>
@@ -48,7 +50,7 @@ const setQty = (item, qty) => {
         <cart-list :items="items" @qty-change="setQty" />
         <div class="flex">
           <a>Continue Shopping</a>
-          <div>Subtotal: $24.90</div>
+          <div>Subtotal: ${{ subtotal.toFixed(2) }}</div>
         </div>
       </div>
       <creditcard-form />
