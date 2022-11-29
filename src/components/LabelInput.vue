@@ -22,7 +22,7 @@ defineProps({
       type="text"
       class="bg-transparent text-[#edeef5] border-b border-gray-500 py-3 w-full"
       :value="modelValue"
-      @change="emit('change', $event.target.value)"
+      @input="emit('change', $event.target.value)"
     />
   </div>
 </template>
