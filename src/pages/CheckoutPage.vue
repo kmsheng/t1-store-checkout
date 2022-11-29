@@ -6,7 +6,7 @@ import food1 from '../assets/food1.jpg'
 import food2 from '../assets/food2.jpg'
 import food3 from '../assets/food3.jpg'
 
-const items = reactive([
+const items = [
   {
     id: '4231648',
     name: 'Chicken momo',
@@ -31,7 +31,9 @@ const items = reactive([
     imgSrc: food3,
     alt: 'Three chicken momos on a plate.'
   },
-])
+]
+
+const state = reactive({ items })
 
 const setQty = (item, qty) => {
   if (qty >= 1) {
@@ -39,7 +41,11 @@ const setQty = (item, qty) => {
   }
 }
 
-const subtotal = computed(() => items.reduce((s, item) => s + (item.price * item.qty), 0))
+const deleteItem = target => {
+  state.items = state.items.filter(item => item.id !== target.id)
+}
+
+const subtotal = computed(() => state.items.reduce((s, item) => s + (item.price * item.qty), 0))
 </script>
 
 <template>
@@ -47,7 +53,8 @@ const subtotal = computed(() => items.reduce((s, item) => s + (item.price * item
     <div class="container flex py-14">
       <div class="grow pl-6 pr-14">
         <div class="text-2xl font-bold">Shopping Cart</div>
-        <cart-list :items="items" @qty-change="setQty" />
+        <div v-if="state.items.length === 0">Your cart is empty.</div>
+        <cart-list v-else :items="state.items" @qty-change="setQty" @delete="deleteItem" />
         <div class="flex">
           <a>Continue Shopping</a>
           <div>Subtotal: ${{ subtotal.toFixed(2) }}</div>

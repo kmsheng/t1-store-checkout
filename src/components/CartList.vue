@@ -2,7 +2,7 @@
 import IconCross from './icons/IconCross.vue'
 import QtyInput from './QtyInput.vue'
 
-const emit = defineEmits(['qtyChange'])
+const emit = defineEmits(['delete', 'qtyChange'])
 
 defineProps({
   items: {
@@ -26,7 +26,7 @@ defineProps({
         {{ (item.price * item.qty).toFixed(2) }}
       </div>
       <button class="inline-block px-1.5 py-1 hover:bg-[#e7e7e7] transition-colors duration-300">
-        <icon-cross />
+        <icon-cross @click="emit('delete', item)" />
       </button>
     </div>
   </div>
