@@ -47,6 +47,14 @@ const deleteItem = target => {
 }
 
 const subtotal = computed(() => state.items.reduce((s, item) => s + (item.price * item.qty), 0))
+
+const form = reactive({
+  cardName: 'Giga Tamarashvili',
+  cardNumber: '1234567812345678',
+  expMonth: null,
+  expYear: null,
+  cvv: null
+})
 </script>
 
 <template>
@@ -67,7 +75,7 @@ const subtotal = computed(() => state.items.reduce((s, item) => s + (item.price 
           </div>
         </div>
       </div>
-      <creditcard-form />
+      <creditcard-form :form="form" />
     </div>
   </div>
 </template>
