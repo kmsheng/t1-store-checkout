@@ -3,8 +3,9 @@ import FakeCreditcard from './FakeCreditcard.vue'
 import FormLabel from './FormLabel.vue'
 import LabelInput from './LabelInput.vue'
 
+const emit = defineEmits(['change'])
 defineProps({
-  form: {
+  modelValue: {
     type: Object,
     required: true
   }
@@ -20,7 +21,18 @@ defineProps({
         <fake-creditcard class="-translate-x-[90px]" />
       </div>
     </div>
-    <label-input class="mt-6" label="Name on Card" v-model="form.cardName" />
-    <label-input class="mt-6" label="Card Number" v-model="form.cardNumber" />
+    <label-input
+      class="mt-6"
+      label="Name on Card"
+      :modelValue="modelValue.cardName"
+      @change="value => emit('change', 'cardName', value)"
+    />
+    <label-input
+      class="mt-6"
+      label="Card Number"
+      :modelValue="modelValue.cardNumber"
+      @change="value => emit('change', 'cardNumber', value)"
+    />
+    <div class="text-white">{{ modelValue }}</div>
   </div>
 </template>
