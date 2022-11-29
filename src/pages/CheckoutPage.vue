@@ -2,6 +2,7 @@
 import { computed, reactive } from 'vue'
 import CartList from '../components/CartList.vue'
 import CreditcardForm from '../components/CreditcardForm.vue'
+import IconArrowLeft from '../components/icons/IconArrowLeft.vue'
 import food1 from '../assets/food1.jpg'
 import food2 from '../assets/food2.jpg'
 import food3 from '../assets/food3.jpg'
@@ -55,9 +56,15 @@ const subtotal = computed(() => state.items.reduce((s, item) => s + (item.price 
         <div class="text-2xl font-bold">Shopping Cart</div>
         <div v-if="state.items.length === 0">Your cart is empty.</div>
         <cart-list v-else :items="state.items" @qty-change="setQty" @delete="deleteItem" />
-        <div class="flex">
-          <a>Continue Shopping</a>
-          <div>Subtotal: ${{ subtotal.toFixed(2) }}</div>
+        <div class="flex place-content-between py-8">
+          <a class="flex items-center text-[#3777da] font-bold">
+            <icon-arrow-left class="mr-3" />
+            Continue Shopping
+          </a>
+          <div class="text-[#c2c3c3] font-semibold">
+            Subtotal:
+            <strong class="font-semibold text-2xl text-[#393940]">${{ subtotal.toFixed(2) }}</strong>
+          </div>
         </div>
       </div>
       <creditcard-form />
