@@ -4,7 +4,7 @@ import FormLabel from './FormLabel.vue'
 </script>
 
 <template>
-  <div class="creditcard-form w-[440px] px-12 py-8 rounded-lg drop-shadow-2xl">
+  <div class="w-[440px] px-12 py-8 rounded-lg bg-gradient-to-tr from-[#2c2d31] to-[#42434c]  drop-shadow-2xl">
     <div class="text-white font-medium text-2xl mb-12">Card Details</div>
     <div>
       <form-label>Card Type</form-label>
@@ -14,9 +14,3 @@ import FormLabel from './FormLabel.vue'
     </div>
   </div>
 </template>
-
-<style scoped>
-.creditcard-form {
-  background: linear-gradient(45deg, #2c2d31, #42434c);
-}
-</style>
