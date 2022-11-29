@@ -1,10 +1,16 @@
 <script setup>
+import FakeCreditcard from './FakeCreditcard.vue'
+import FormLabel from './FormLabel.vue'
 </script>
 
 <template>
   <div class="creditcard-form w-[480px] px-12 py-8 rounded-lg">
-    <div class="text-white font-medium text-2xl">Card Details</div>
+    <div class="text-white font-medium text-2xl mb-12">Card Details</div>
     <div>
+      <form-label>Card Type</form-label>
+      <div class="flex mt-6">
+        <fake-creditcard class="-translate-x-[90px]" />
+      </div>
     </div>
   </div>
 </template>
