@@ -15,7 +15,7 @@ defineProps({
 <template>
   <div>
     <div v-for="item in items" class="flex place-content-between items-center border-b border-[#e5e5e7]">
-      <img class="w-52 h-52" :src="item.imgSrc" :alt="item.alt" />
+      <img class="w-44 h-44" :src="item.imgSrc" :alt="item.alt" />
       <div class="px-8 grow">
         <div class="font-bold" v-text="item.name" />
         <div class="text-[#c2c3c3] text-sm">#{{ item.id }}</div>
