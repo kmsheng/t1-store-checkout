@@ -1,7 +1,9 @@
 # t1 Store Checkout
 Frontend Developer Assessment from [Terminal1](https://hackmd.io/@terminal1/assessment/%2F%40terminal1%2Fassessment-frontend-react),
 
-this mockup implementation is made with Vue 3, Tailwindcss and Vite and it's fully responsive.
+the assessment asks to implement a shopping cart page with frontend framework which includes state management, 
+
+so this mockup implementation is made with Vue 3, Pinia, Tailwindcss and Vite. It's fully responsive for a bonus.
 
 You may find the demo site [here](https://kmsheng.github.io/t1-store-checkout/)
 
