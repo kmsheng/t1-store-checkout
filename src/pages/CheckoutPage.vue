@@ -50,10 +50,10 @@ const subtotal = computed(() => state.items.reduce((s, item) => s + (item.price 
 
 const form = reactive({
   cardName: 'Giga Tamarashvili',
-  cardNumber: '1234 5678 1234 5678',
+  cardNumber: '****   ****   ****   ****',
   expMonth: '',
   expYear: '',
-  cvv: ''
+  cvv: 'XXX'
 })
 
 const setForm = (prop, value) => {
