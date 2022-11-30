@@ -28,7 +28,7 @@ const setForm = (prop, value) => {
   <div class="flex justify-center bg-[#f6f6f6] text-[#393940]">
     <div class="container flex flex-col lg:flex-row py-4 sm:py-6 mx-4 md:mx-auto">
       <div class="grow p-4 md:pr-14 md:pl-0 md:py-0">
-        <div class="text-2xl font-bold mb-4 sm:mb-14">Shopping Cart</div>
+        <h1 class="text-2xl font-bold mb-4 sm:mb-14">Shopping Cart</h1>
         <div v-if="product.items.length === 0">Your cart is empty.</div>
         <cart-list v-else
           :items="product.items"
