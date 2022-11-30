@@ -26,7 +26,7 @@ const setForm = (prop, value) => {
 
 <template>
   <div class="flex justify-center bg-[#f6f6f6] text-[#393940]">
-    <div class="container flex flex-col lg:flex-row py-4 sm:py-12 mx-4 md:mx-auto">
+    <div class="container flex flex-col lg:flex-row py-4 sm:py-6 mx-4 md:mx-auto">
       <div class="grow p-4 md:pr-14 md:pl-0 md:py-0">
         <div class="text-2xl font-bold mb-4 sm:mb-14">Shopping Cart</div>
         <div v-if="product.items.length === 0">Your cart is empty.</div>
@@ -35,7 +35,7 @@ const setForm = (prop, value) => {
           @qty-change="product.setQty"
           @delete="target => product.deleteItem(target.id)"
         />
-        <div class="flex flex-col md:flex-row items-end place-content-between py-8">
+        <div class="flex flex-col md:flex-row items-end place-content-between mt-14">
           <a class="flex order-2 md:order-1 mt-4 md:mt-auto  items-center text-[#3777da] font-bold">
             <icon-arrow-left class="mr-3" />
             Continue Shopping
