@@ -56,5 +56,40 @@ npm run test:e2e
 npm run lint
 ```
 
+### Directory and file s structure
+
+```
+.
+├── App.vue 
+├── assets
+│   ├── base.css     // Declaration of tailwind directives.
+│   ├── food1.jpg    // Product item images.
+│   ├── food2.jpg
+│   ├── food3.jpg
+│   ├── logo.svg
+│   └── main.css
+├── components
+│   ├── CartList.vue             // Cart item list.
+│   ├── CreditcardForm.vue       // Creditcard form component.
+│   ├── ExpSelectInput.vue       // Component for creditcard expiration date.
+│   ├── FakeCreditcard.vue       // Pure css fake creditcard component.
+│   ├── FormLabel.vue            // Label component.
+│   ├── LabelInput.vue           // Input with label.
+│   ├── QtyInput.vue             // The quantity text input with decrement and increment buttons.
+│   └── icons
+│       ├── IconArrowLeft.vue    // Left Arrow Icon SVG.
+│       ├── IconCross.vue        // Cross Icon SVG.
+│       ├── IconMasterCard.vue.  // Pure css Master Card logo.
+│       └── IconVisa.vue        // VISA logo SVG file.
+├── main.js // Main entry of the project. Vue app is initialzed right here
+            // which defines what plugins to use and the import of primary css file.
+├── pages
+│   ├── CheckoutPage.vue  // Checkout page component.
+│   └── __tests__
+│       └── CheckoutPage.spec.js    // unit test of CheckoutPage component.
+└── stores
+    └── product.js  // Product store of Pinia. ( Something similiar to redux store or vuex. )
+```
+
 ### Todos
  - Form validations which includes creditcard.
