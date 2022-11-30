@@ -50,15 +50,15 @@ const subtotal = computed(() => state.items.reduce((s, item) => s + (item.price 
 
 const form = reactive({
   cardName: 'Giga Tamarashvili',
-  cardNumber: '****   ****   ****   ****',
+  cardNumber: '1234   5678   1234   5678',
   expMonth: '',
   expYear: '',
-  cvv: 'XXX'
+  cvv: '123'
 })
 
 const setForm = (prop, value) => {
   if (prop === 'cardNumber') {
-    form[prop] = value ? value.replace(/\s/g, '').match(/.{1,4}/g).join(' ') : ''
+    form[prop] = value ? value.replace(/\s/g, '').match(/.{1,4}/g).join('   ') : ''
     return
   }
   form[prop] = value
