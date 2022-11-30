@@ -25,7 +25,7 @@ const mms = range(1, 13).map(v => String(v).padStart(2, '0'))
         :value="month"
         class="select mr-4" @change="emit('update:month', $event.target.value)">
         <option value="">mm</option>
-        <option v-for="mm in mms" :value="mm">{{ mm }}</option>
+        <option v-for="mm in mms" :key="mm" :value="mm">{{ mm }}</option>
       </select>
       <input
         type="text"

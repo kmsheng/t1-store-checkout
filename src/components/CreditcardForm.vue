@@ -3,7 +3,6 @@ import FakeCreditcard from './FakeCreditcard.vue'
 import FormLabel from './FormLabel.vue'
 import LabelInput from './LabelInput.vue'
 import ExpSelectInput from './ExpSelectInput.vue'
-import LabelSelect from './LabelSelect.vue'
 
 const emit = defineEmits(['update:modelValue'])
 defineProps({

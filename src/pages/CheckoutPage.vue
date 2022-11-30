@@ -1,5 +1,5 @@
 <script setup>
-import { computed, reactive } from 'vue'
+import { reactive } from 'vue'
 import CartList from '../components/CartList.vue'
 import CreditcardForm from '../components/CreditcardForm.vue'
 import IconArrowLeft from '../components/icons/IconArrowLeft.vue'
