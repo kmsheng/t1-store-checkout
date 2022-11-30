@@ -12,6 +12,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "lodash.range": "^3.2.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
