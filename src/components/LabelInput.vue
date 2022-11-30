@@ -11,7 +11,8 @@ defineProps({
   modelValue: {
     type: String,
     required: true
-  }
+  },
+  placeholder: String
 })
 </script>
 
@@ -21,6 +22,7 @@ defineProps({
     <input
       type="text"
       class="input"
+      :placeholder="placeholder"
       :value="modelValue"
       @input="emit('change', $event.target.value)"
     />
