@@ -1,7 +1,9 @@
 # t1 Store Checkout
 Frontend Developer Assessment from [Terminal1](https://hackmd.io/@terminal1/assessment/%2F%40terminal1%2Fassessment-frontend-react),
 
-this mockup implementation is made with Vue 3, Tailwind and Vite and it's fully responsive.
+this mockup implementation is made with Vue 3, Tailwindcss and Vite and it's fully responsive.
+
+You may find the demo site [here](https://kmsheng.github.io/t1-store-checkout/)
 
 ![Screen Shot 2022-11-30 at 1 08 29 PM](https://user-images.githubusercontent.com/880569/204712440-95e2377a-1d61-4935-add4-df909c6cc7e7.jpg)
 
