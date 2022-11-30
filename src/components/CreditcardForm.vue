@@ -39,8 +39,8 @@ defineProps({
       <exp-select-input
         :month="modelValue.expMonth"
         :year="modelValue.expYear"
-        @update.month="value => emit('update:modelValue', 'expMonth', value)"
-        @update.year="value => emit('update:modelValue', 'expYear', value)"
+        @update:month="value => emit('update:modelValue', 'expMonth', value)"
+        @update:year="value => emit('update:modelValue', 'expYear', value)"
       />
       <label-input
         class="w-10 ml-4"
