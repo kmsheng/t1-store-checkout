@@ -20,7 +20,7 @@ defineProps({
         <div class="font-bold" v-text="item.name" />
         <div class="text-[#c2c3c3] text-sm">#{{ item.id }}</div>
       </div>
-      <qty-input class="px-4" :qty="item.qty" @change="qty => emit('qtyChange', item, qty)" />
+      <qty-input class="px-4" :qty="item.qty" @change="qty => emit('qtyChange', item.id, qty)" />
       <div class="font-bold px-4 whitespace-nowrap">
         <span class="inline-block scale-75 translate-x-0.5 -translate-y-1" v-text="'$'" />
         {{ (item.price * item.qty).toFixed(2) }}
