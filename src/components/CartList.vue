@@ -25,8 +25,10 @@ defineProps({
         <span class="inline-block scale-75 translate-x-0.5 -translate-y-1" v-text="'$'" />
         {{ (item.price * item.qty).toFixed(2) }}
       </div>
-      <button class="inline-block px-1.5 py-1 hover:bg-[#e7e7e7] transition-colors duration-300">
-        <icon-cross @click="emit('delete', item)" />
+      <button
+        class="inline-block px-1.5 py-1 hover:bg-[#e7e7e7] transition-colors duration-300"
+        @click="emit('delete', item)">
+        <icon-cross />
       </button>
     </div>
   </div>
