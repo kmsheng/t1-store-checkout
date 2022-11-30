@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "lodash.range": "^3.2.0",
+    "pinia": "^2.0.27",
     "vue": "^3.2.45"
   },
   "devDependencies": {
