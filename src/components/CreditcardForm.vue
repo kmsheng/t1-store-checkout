@@ -42,8 +42,8 @@ defineProps({
         @update.month="value => emit('change', 'expMonth', value)"
         @update.year="value => emit('change', 'expYear', value)"
       />
-      <label-select
-        class="w-10 ml-4 flex flex-col flex-auto"
+      <label-input
+        class="w-10 ml-4"
         label="CVV"
         :modelValue="modelValue.cvv"
         @change="value => emit('change', 'cvv', value)"
