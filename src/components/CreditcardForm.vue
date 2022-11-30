@@ -5,7 +5,7 @@ import LabelInput from './LabelInput.vue'
 import ExpSelectInput from './ExpSelectInput.vue'
 import LabelSelect from './LabelSelect.vue'
 
-const emit = defineEmits(['change'])
+const emit = defineEmits(['update:modelValue'])
 defineProps({
   modelValue: {
     type: Object,
@@ -27,26 +27,26 @@ defineProps({
       class="mt-6"
       label="Name on Card"
       :modelValue="modelValue.cardName"
-      @change="value => emit('change', 'cardName', value)"
+      @update:modelValue="value => emit('update:modelValue', 'cardName', value)"
     />
     <label-input
       class="mt-6"
       label="Card Number"
       :modelValue="modelValue.cardNumber"
-      @change="value => emit('change', 'cardNumber', value)"
+      @update:modelValue="value => emit('update:modelValue', 'cardNumber', value)"
     />
     <div class="flex mt-6">
       <exp-select-input
         :month="modelValue.expMonth"
         :year="modelValue.expYear"
-        @update.month="value => emit('change', 'expMonth', value)"
-        @update.year="value => emit('change', 'expYear', value)"
+        @update.month="value => emit('update:modelValue', 'expMonth', value)"
+        @update.year="value => emit('update:modelValue', 'expYear', value)"
       />
       <label-input
         class="w-10 ml-4"
         label="CVV"
         :modelValue="modelValue.cvv"
-        @change="value => emit('change', 'cvv', value)"
+        @update:modelValue="value => emit('update:modelValue', 'cvv', value)"
       />
     </div>
     <button class="btn-submit mt-12" type="submit">Check Out</button>

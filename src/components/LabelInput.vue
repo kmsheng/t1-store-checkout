@@ -1,7 +1,7 @@
 <script setup>
 import FormLabel from './FormLabel.vue'
 
-const emit = defineEmits(['change'])
+const emit = defineEmits(['update:modelValue'])
 
 defineProps({
   label: {
@@ -24,7 +24,7 @@ defineProps({
       class="input"
       :placeholder="placeholder"
       :value="modelValue"
-      @input="emit('change', $event.target.value)"
+      @input="emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>

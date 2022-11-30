@@ -83,7 +83,7 @@ const setForm = (prop, value) => {
           </div>
         </div>
       </div>
-      <creditcard-form :modelValue="form" @change="setForm" />
+      <creditcard-form :modelValue="form" @update:modelValue="setForm" />
     </div>
   </div>
 </template>
