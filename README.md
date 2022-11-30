@@ -5,6 +5,8 @@ the assessment asks to implement a shopping cart page with frontend framework wh
 
 so this mockup implementation is made with Vue 3, Pinia, Tailwindcss and Vite. It's fully responsive for a bonus.
 
+I choose Vue 3 for this project because it provides the simplest syntax for building it.
+
 You may find the demo site [here](https://kmsheng.github.io/t1-store-checkout/)
 
 ![Screen Shot 2022-11-30 at 1 08 29 PM](https://user-images.githubusercontent.com/880569/204712440-95e2377a-1d61-4935-add4-df909c6cc7e7.jpg)
