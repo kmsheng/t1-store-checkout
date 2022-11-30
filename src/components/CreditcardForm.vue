@@ -2,6 +2,8 @@
 import FakeCreditcard from './FakeCreditcard.vue'
 import FormLabel from './FormLabel.vue'
 import LabelInput from './LabelInput.vue'
+import ExpSelectInput from './ExpSelectInput.vue'
+import LabelSelect from './LabelSelect.vue'
 
 const emit = defineEmits(['change'])
 defineProps({
@@ -33,5 +35,20 @@ defineProps({
       :modelValue="modelValue.cardNumber"
       @change="value => emit('change', 'cardNumber', value)"
     />
+    <div class="flex mt-6">
+      <exp-select-input
+        :month="modelValue.expMonth"
+        :year="modelValue.expYear"
+        @update.month="value => emit('change', 'expMonth', value)"
+        @update.year="value => emit('change', 'expYear', value)"
+      />
+      <label-select
+        class="w-10 ml-4 flex flex-col flex-auto"
+        label="CVV"
+        :modelValue="modelValue.cvv"
+        @change="value => emit('change', 'cvv', value)"
+      />
+    </div>
+    <button class="btn-submit mt-12" type="submit">Check Out</button>
   </div>
 </template>
