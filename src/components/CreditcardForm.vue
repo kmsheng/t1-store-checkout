@@ -3,6 +3,7 @@ import FakeCreditcard from './FakeCreditcard.vue'
 import FormLabel from './FormLabel.vue'
 import LabelInput from './LabelInput.vue'
 import ExpSelectInput from './ExpSelectInput.vue'
+import IconMasterCard from './icons/IconMasterCard.vue'
 
 const emit = defineEmits(['update:modelValue'])
 defineProps({
@@ -18,8 +19,9 @@ defineProps({
     <div class="text-white font-medium text-2xl mb-8">Card Details</div>
     <div>
       <form-label>Card Type</form-label>
-      <div class="flex mt-6">
-        <fake-creditcard class="lg:-translate-x-[90px]" />
+      <div class="flex items-center justify-around mt-6">
+        <fake-creditcard class="w-[300px] md:-translate-x-[90px]" />
+        <icon-master-card class="translate-x-[14px] sm:-translate-x-[20px]" />
       </div>
     </div>
     <label-input
