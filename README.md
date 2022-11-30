@@ -56,7 +56,7 @@ npm run test:e2e
 npm run lint
 ```
 
-### Directory and file s structure
+### Directory and file structure
 
 ```
 .
