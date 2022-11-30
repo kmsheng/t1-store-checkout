@@ -97,3 +97,7 @@ npm run lint
 
 ### Todos
  - Form validations which includes creditcard.
+
+### My other project that I'm proud of.
+- [Beyond](https://github.com/kmsheng/beyond)
+- [KEKATA Lite](https://github.com/karmapa/ketaka-lite)
