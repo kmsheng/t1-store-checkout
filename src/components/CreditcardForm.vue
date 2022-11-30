@@ -50,6 +50,6 @@ defineProps({
         @update:modelValue="value => emit('update:modelValue', 'cvv', value)"
       />
     </div>
-    <button class="btn-submit mt-12" type="submit">Check Out</button>
+    <button class="btn-submit mt-12 rounded" type="submit">Check Out</button>
   </div>
 </template>
