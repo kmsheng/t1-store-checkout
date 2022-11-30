@@ -6,6 +6,9 @@
   .btn-qty {
     @apply w-8 font-bold hover:bg-[#e7e7e7] transition-colors duration-300;
   }
+  .select {
+    @apply bg-transparent text-white grow w-full py-3 pr-2 border-b border-gray-500;
+  }
   .input {
     @apply bg-transparent text-[#edeef5] border-b border-gray-500 py-3 w-full;
   }
